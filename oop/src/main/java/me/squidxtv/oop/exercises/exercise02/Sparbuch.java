@@ -2,9 +2,9 @@ package me.squidxtv.oop.exercises.exercise02;
 
 public class Sparbuch {
 
-    private String kontonummer;
+    private final String kontonummer;
     private double kapital;
-    private double zinssatz;
+    private final double zinssatz;
 
     public Sparbuch(String kontonummer, double kapital, double zinssatz) {
         this.kontonummer = kontonummer;
@@ -13,6 +13,10 @@ public class Sparbuch {
     }
 
     public void zahleEin(double add) {
+        if (add < 0) {
+            return;
+        }
+
         kapital += add;
     }
 
@@ -20,6 +24,7 @@ public class Sparbuch {
         if (kapital - withdraw < 0) {
             return;
         }
+
         kapital -= withdraw;
     }
 

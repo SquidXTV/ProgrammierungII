@@ -4,7 +4,6 @@ public class Zaehler {
 
     private int counter = 0;
 
-
     public void hochzaehlen() {
         counter++;
     }

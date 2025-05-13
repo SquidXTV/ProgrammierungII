@@ -43,13 +43,9 @@ public class Date {
     }
 
     public String display() {
-        StringBuilder builder = new StringBuilder();
-        builder.append(String.format("%02d", day));
-        builder.append(".");
-        builder.append(String.format("%02d", month));
-        builder.append(".");
-        builder.append(String.format("%02d", year));
-        return builder.toString();
+        return """
+                %02d.%02d.%02d
+                """.formatted(day, month, year);
     }
 
     public int getDay() {
